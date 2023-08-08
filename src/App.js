@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import './App.css';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   // Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  // Link
+} from "react-router-dom";
 
 
 function App() {
@@ -52,17 +52,17 @@ function App() {
    }
   return (
     <>
-    {/* <Router> */}
+    <Router>
    
     <Navbar title="SkAnalazer" homeText="Home" aboutText="About" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
     <div className="container my-3">
-    <TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} />
+    {/* <TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} /> */}
 {/* new update switch to routes */}
-    {/* <Routes>
+    <Routes>
         <Route exact path="/about" element={<About />} />
         <Route xact path="/" element={ <TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode} />} />
-    </Routes> */}
+    </Routes>
     {/* <Switch>
           <Route path="/about">
             <About />
@@ -72,7 +72,7 @@ function App() {
           </Route>
       </Switch> */}
       </div>
-      {/* </Router> */}
+      </Router>
     </>
   );
 }
